@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   
+    box-sizing: border-box;
 }
 
 body {
@@ -40,7 +40,7 @@ h1, h2, h3 {
 }
 
 .logo img {
-        height: 90px;
+        height: 120px;
 }
 
 .nav-icons {
@@ -50,11 +50,11 @@ h1, h2, h3 {
 
 .icon {
     width: 20px;
-    height: 20px;
     stroke: black;
     fill: none;
     margin-left: 15px;
     cursor: pointer;
+    font-size: 20px;
 }
 
 /* .delivery-text span {
@@ -130,32 +130,48 @@ h1, h2, h3 {
 
 .footer {
     background: #FFE0B2;
-    padding: 40px 120px;
+    padding: 10px 100px;
+    padding-bottom: 20px;
 }
 
 .footer-top {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
+    padding: 10px 0;
+}
+
+.footer-logo {
+    grid-column: 1;
+    justify-self: start;
 }
 
 .footer-logo img {
-    height: 160px;
+    height: 130px;
 }
 
 .footer-contact {
-    text-align: center;
+    grid-column: 3;
+    justify-self: start;
+    text-align: left;
+    color: #5a5a5a;
+}
+
+.footer-contact h4 {
+    color: black;
 }
 
 .footer-contact h4, .footer-time h4 {
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .social-icons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
+    font-size: 16px;
+    color: #5a5a5a;
 }
 
 .social-icons span {
@@ -164,21 +180,25 @@ h1, h2, h3 {
     justify-content: center;
     width: 36px;
     height: 36px;
-    border: 1px solid black;
+    border: 1px solid #5a5a5a;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .footer-time {
-    text-align: right;
-    font-size: 14px;
-    line-height: 1.6;
+    grid-column: 4;
+    justify-self: start;
+    text-align: left;
 }
 
-.social-icons i {
-    font-size: 16px;
+.footer-time p {
+    color: #5a5a5a;
 }
+
+/* .social-icons i {
+    font-size: 16px;
+} */
 
 .social-icons span:hover {
     background: #3E2522;
@@ -213,7 +233,7 @@ h1, h2, h3 {
 
 .footer-col ul li a {
     text-decoration: none;
-    color: #000000;
+    color: #5a5a5a;
     font-size: 14px;
 }
 
@@ -227,12 +247,14 @@ h1, h2, h3 {
     font-size: 14px;
     gap: 10px;
     margin-bottom: 10px;
+    color: #5a5a5a;
 }
 
 .footer-col p span {
     width: 20px;
     display: flex;
     justify-content: center;
+    color: black;
 }
 
 .footer-bottom {
