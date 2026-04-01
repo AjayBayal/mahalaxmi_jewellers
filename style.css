@@ -31,12 +31,14 @@ h1, h2, h3 {
     border: 1px solid #5a5a5a;
     border-radius: 20px;
     padding: 5px 10px;
+    width: 300px;
 }
 
 .search-box input {
     border: none;
     outline: none;
     font-size: 14px;
+    flex: 1;
 }
 
 .logo img {
@@ -83,18 +85,19 @@ h1, h2, h3 {
 
 .menu li {
     position: relative;
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 .menu li a {
     text-decoration: none;
     color: #000000;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 600;
     transition: 0.3s ease;
 }
 
 .menu li a:hover {
-    color: #D3A376;
+    color: #C89B5E;
 }
 
 .dropdown-menu {
@@ -338,22 +341,23 @@ h1, h2, h3 {
 
 .features {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 35px 120px;
+    padding: 40px 120px;
     flex-wrap: wrap;
+    gap: 70px;
 }
 
 .feature-item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     transition: 0.3s;
 }
 
 .icon-circle {
-    width: 65px;
-    height: 65px;
+    width: 80px;
+    height: 80px;
     border: 1.5px dashed #3E2522;
     border-radius: 50%;
     display: flex;
@@ -363,18 +367,18 @@ h1, h2, h3 {
 }
 
 .icon-circle i {
-    font-size: 20px;
+    font-size: 30px;
     color: #3E2522;
 }
 
 .feature-content h4 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
     margin: 0;
 }
 
 .feature-content p {
-    font-size: 16px;
+    font-size: 18px;
     margin: 2px 0 0;
     color: #5a5a5a;
 }
@@ -404,21 +408,31 @@ h1, h2, h3 {
 
 .category-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap;
-    gap: 80px;
+    flex-wrap: wrap;
 }
 
 .category-item {
     text-align: center;
     width: 150px;
-    cursor: pointer;
+    /* text-decoration: none; !important */
+    color: inherit;
+    /* cursor: pointer; */
+}
+
+.category-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.category-item a:hover {
+    color: #C89B5E;
 }
 
 .circle {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     background-color: #fff;
     display: flex;
@@ -429,11 +443,13 @@ h1, h2, h3 {
 }
 
 .circle img {
-    width: 120px;
+    width: 140px;
     height: auto;
 }
 
 .category-item p {
     margin-top: 12px;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
 }
