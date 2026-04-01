@@ -40,7 +40,7 @@ h1, h2, h3 {
 }
 
 .logo img {
-        height: 120px;
+        height: 100px;
 }
 
 .nav-icons {
@@ -54,7 +54,7 @@ h1, h2, h3 {
     fill: none;
     margin-left: 15px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 /* .delivery-text span {
@@ -377,4 +377,63 @@ h1, h2, h3 {
     font-size: 16px;
     margin: 2px 0 0;
     color: #5a5a5a;
+}
+
+
+.feature-hr {
+    margin: 0 120px;
+}
+
+/* =============== Shop By Category =============== */
+
+.shop-category {
+    text-align: center;
+    padding: 60px 120px;
+}
+
+.shop-category h2 {
+    font-size: 38px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    cursor: default;
+}
+
+.shop-category h2 span {
+    color: #D3A376;
+}
+
+.category-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 80px;
+}
+
+.category-item {
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+}
+
+.circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+}
+
+.circle img {
+    width: 120px;
+    height: auto;
+}
+
+.category-item p {
+    margin-top: 12px;
+    font-size: 14px;
 }
