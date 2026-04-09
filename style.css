@@ -85,7 +85,7 @@ h1, h2, h3 {
 
 .menu li {
     position: relative;
-    margin-left: 60px;
+    margin-left: 80px;
 }
 
 .menu li a {
@@ -139,7 +139,7 @@ h1, h2, h3 {
 
 .footer-top {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.5fr 1.5fr 1fr;
     align-items: center;
     padding: 10px 0;
 }
@@ -403,7 +403,7 @@ h1, h2, h3 {
 }
 
 .shop-category h2 span {
-    color: #D3A376;
+    color: #C89B5E;
 }
 
 .category-wrapper {
@@ -416,14 +416,13 @@ h1, h2, h3 {
 .category-item {
     text-align: center;
     width: 150px;
-    /* text-decoration: none; !important */
     color: inherit;
-    /* cursor: pointer; */
 }
 
 .category-item a {
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s ease;
 }
 
 .category-item a:hover {
@@ -452,4 +451,117 @@ h1, h2, h3 {
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
+}
+
+/* =============== Trending Products =============== */
+
+.trending {
+    padding: 60px 120px;
+    text-align: center;
+}
+
+.trending h2 {
+    font-size: 42px;
+}
+
+.trending span {
+    color: #C89B5E;
+}
+
+.trending-subtitle {
+    color: #5a5a5a;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 270px;
+    text-align: center;
+}
+
+/* Image Box */
+
+.img-box {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 300px;
+    background: #f6f6f6;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.img-box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: 0.7s;
+    transform: translate(-50%, -50%) scale(1.25);
+}
+
+/* Hover Image Change */
+
+.trend-hover {
+    opacity: 0;
+}
+
+.img-box:hover .trend-img {
+    opacity: 0;
+}
+
+.img-box:hover .trend-hover {
+    opacity: 1;
+}
+
+.product h4 {
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 16px;
+    margin: 2px 0;
+}
+
+.price span {
+    text-decoration: line-through;
+    color: #5a5a5a;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.stars {
+    color: #FAB600;
+    margin: 6px 0;
+}
+
+.stars i {
+    font-size: 12px;
+}
+
+.btn {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #3E2522;
+
 }
