@@ -518,6 +518,26 @@ h1, h2, h3 {
     transform: translate(-50%, -50%) scale(1.25);
 }
 
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+
+.wishlist-icon i {
+    font-size: 18px;
+    color: #000;
+    text-shadow: 0 0 3px rgba(255,255,255,0.8);
+}
+
+.img-box:hover .wishlist-icon {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Hover Image Change */
 
 .trend-hover {
