@@ -25,4 +25,6 @@ It focuses on:
 - **JavaScript (ES6)** – Interactivity  
 
 ### Design
-- **Figma** – UI/UX design reference  
+- **Figma** – UI/UX design reference
+- **Figma Link** – https://www.figma.com/design/fKLvAg4Gex4BTVMJ0q03hh/Jewelry_ecommorce?node-id=0-1&t=1wbCmMc2C1SciOAM-1
+
