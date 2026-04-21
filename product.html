@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahalaxmi Jewellers</title>
+
+    <link rel="shortcut icon" href="/img/mj_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="top-bar">
+
+            <div class="search-box">
+                <input type="text" placeholder="Search Product...">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            </div>
+
+            <div class="logo">
+                <img src="/src/mj_logo.png" alt="mahalaxmi_jewellers_logo">
+            </div>
+
+            <div class="nav-icons">
+                <span class="icon"><i class="fa-solid fa-user"></i></span> <!-- User Profile Icon -->
+                <span class="icon"><i class="fa-solid fa-heart-circle-plus"></i></span> <!-- Wishlist ICon -->
+                <span class="icon"><i class="fa-solid fa-cart-plus"></i></span> <!-- User Profile Icon -->
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="nav-links">
+            <!-- <p class="delivery-text">
+                    <span>Free</span> India Standerd Delivery on all order.
+                </p> -->
+
+            <nav>
+                <ul class="menu">
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="dropdown"><a href="shop.html">Shop ▾</a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Rings</a></li>
+                            <li><a href="#">Bracelets</a></li>
+                            <li><a href="#">Earrings</a></li>
+                            <li><a href="#">Pendant</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <hr>
+
+    <!-- =============== Pri. Section =============== -->
+
+    <div class="product-container">
+
+        <div class="product-gallery">
+
+            <div class="main-image-wrapper">
+                <img src="src/products/product-1.jpg" alt="Floral Gold Ring" id="mainImage">
+            </div>
+
+            <div class="thumbnail-row">
+
+                <img class="thumbnail active" src="src/products/product-1.jpg" alt="" onclick="changeImage(this)">
+                <img class="thumbnail" src="src/products/product-1thumb.jpg" alt="" onclick="changeImage(this)">
+                <img class="thumbnail" src="src/products/product-1thumb2.jpg" alt="" onclick="changeImage(this)">
+                <img class="thumbnail" src="src/products/product-1thumb3.jpg" alt="" onclick="changeImage(this)">
+                <img class="thumbnail" src="src/products/product-1thumb4.jpg" alt="" onclick="changeImage(this)">
+            </div>
+        </div>
+
+        <div class="product-details">
+
+            <h1 class="product-title">Floral Gold Ring</h1>
+            <p class="product-subtitle">Made with pure 22 KT gold</p>
+
+            <div class="product-rating">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>1 review</span>
+            </div>
+
+            <div class="product-price"><span class="current-price">Rs.1999</span> <span
+                    class="original-price">Rs.2499</span></div>
+
+            <div class="delivery-section">
+                <p class="time">Estimated Delivery Time</p>
+
+                <div class="pincode-box">
+                    <input type="text" placeholder="Enter 6 Digit Pincode">
+                    <button class="btn-check">Check</button>
+                </div>
+            </div>
+
+            <div class="cart-action">
+                <div class="quantity-selector">
+                    <button onclick="updateQuantity(-1)">-</button>
+                    <input type="text" id="qty" value="1" readonly>
+                    <button onclick="updateQuantity(1)">+</button>
+                </div>
+
+                <button class="btn-add-cart">ADD TO CART</button>
+            </div>
+
+            <button class="btn-buy-now">BUT IT NOW</button>
+
+            <div class="product-links">
+
+                <button id="wishlistBtn"><i class="fa-regular fa-heart"></i> WISHLIST</button>
+                <button id="sizeGuideBtn"><i class="fa-solid fa-ruler-horizontal"></i> SIZE GUIDE</button>
+                <button id="shareBtn"><i class="fa-solid fa-share-nodes"></i> SHARE</button>
+            </div>
+
+            <div class="accordion-section">
+
+                <button class="accordion-toggle" onclick="toggleAccordion('shipping-content')">
+                    <span class="accordion-title"><i class="fa-solid fa-truck-fast"></i> Shipping & Returns</span>
+                    <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </button>
+
+                <div id="shipping-content" class="accordion-content">
+                    <p>Free shipping and returns available on all orders!</p>
+                    <p>We ship all US domestic orders within <strong>5-7 business days.</strong></p>
+                </div>
+
+                <button class="accordion-toggle" onclick="toggleAccordion('care-content')">
+                    <span class="accordion-title"><i class="fa-regular fa-heart"></i> Care Instruction</span>
+                    <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </button>
+
+                <div id="care-content" class="accordion-content">
+                    <p>We advise routinely dusting your items with a gentle cleanser to preserve its look. Periodically,
+                        it may need to be softly wet with a mild detergent solution.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sizeGuideModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('sizeGuideModal')">&times;</span>
+            <h2>Size Guide</h2>
+            <p style="margin-top: 15px; color: #666;">
+                Here is where you will add your ring sizing chart, measurements, or instructional images.
+            </p>
+        </div>
+    </div>
+
+    <div id="shareModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('shareModal')">&times;</span>
+            <h2>Share This Product</h2>
+            <p style="margin-top: 15px; color: #666;">
+                Add social media icons (Facebook, WhatsApp, Twitter) or a "Copy Link" button here.
+            </p>
+        </div>
+    </div>
+
+    <!--Description Section-->
+
+    <div class="product-desc-sec">
+        <h2 class="main-title">Description</h2>
+
+        <h3 class="sub-title">About This Item</h3>
+        <p class="intro-text">We advise routinely dusting your items with a gentle cleanser to preserve its look.
+            Periodically, it may need to be softly wet with a mild detergent solution.</p>
+
+        <hr class="full-devider">
+
+        <h4 class="list-title">Key Highlights</h4>
+        <ul class="specs-list">
+            <li><span class="spec-label">Brilliant Center Stone :</span> Round-cut stone with halo for extra sparkle</li>
+            <li><span class="spec-label">Elegant Split Band :</span> Dual-band design with micro-stone detailing</li>
+            <li><span class="spec-label">Premium Finish :</span> High-polish gold tone with anti-tarnish coating</li>
+            <li><span class="spec-label">Comfort Fit :</span> Lightweight and smooth for daily wear</li>
+        </ul>
+
+        <hr class="partial-devider">
+
+        <h4 class="list-title">Product Specifications</h4>
+        <ul class="specs-list">
+            <li><span class="spec-label">Material :</span> Gold-plated alloy / sterling base</li>
+            <li><span class="spec-label">Stone Type :</span> Cubic Zirconia</li>
+            <li><span class="spec-label">Design :</span> Halo with split shank</li>
+            <li><span class="spec-label">Size :</span> Standard / adjustable (based on variant)</li>
+        </ul>
+
+        <hr class="full-devider">
+    </div>
+
+
+    <script src="script.js"></script>
+
+    <!-- =============== Footer Start =============== -->
+
+    <footer class="footer">
+
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="/src/mj_logo.png" alt="mj_logo">
+            </div>
+
+            <div class="footer-contact">
+                <h4>Our Social Media</h4>
+
+                <div class="social-icons">
+                    <span><i class="fa-brands fa-facebook-f"></i></span> <!-- Facebook Icon -->
+                    <span><i class="fa-brands fa-x-twitter"></i></span> <!-- Twitter Icon -->
+                    <span><i class="fa-brands fa-instagram"></i></span> <!-- Instagram Icon -->
+                    <span><i class="fa-brands fa-pinterest"></i></span> <!-- Pinterest Icon -->
+                    <span><i class="fa-brands fa-youtube"></i></span> <!-- Youtube Icon -->
+                </div>
+            </div>
+
+            <div class="footer-time">
+                <h4>Opening Time</h4>
+                <p>Mon to Sat : 10:00 AM - 11:00 PM</p>
+                <p>Sunday : 10:00 AM - 04:00 PM</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-middle">
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a href="shop.css">Shop</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Policy & Terms</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Shipping & Return</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Rings</a></li>
+                    <li><a href="#">Earring</a></li>
+                    <li><a href="#">Pendant</a></li>
+                    <li><a href="#">Neckless</a></li>
+                    <li><a href="#">Bracelets</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Store Information</h4>
+                <p><span><i class="fa-solid fa-location-dot"></i></span>92 Vaishali Nagar, Queens Road, Jaipur (302021)
+                </p>
+                <p><span><i class="fa-solid fa-phone"></i></span>+919876543210</p>
+                <p><span><i class="fa-regular fa-envelope"></i></span>info@mahalaxmijewellers.com</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026, All Rights Reserved By Mahalaxmi Jewellers</p>
+        </div>
+    </footer>
+</body>
+
+</html>
